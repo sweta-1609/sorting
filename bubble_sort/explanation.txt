@@ -1,0 +1,1 @@
+Bubble Sort, we repeatedly compare adjacent elements and swap them if they are in the wrong order. With each pass through the array, the largest element "bubbles up" to the end.
