@@ -1,0 +1,73 @@
+-In selection sort, we repeatedly select the smallest element from the unsorted part of the array and place it at the beginning (by swapping).
+
+Initial Array: [65, 25, 12, 22, 11]
+
+Pass 1:
+
+Find smallest element → 11
+
+Swap with first element (65)
+→ [11, 25, 12, 22, 65]
+
+Pass 2:
+
+Find smallest element in remaining [25, 12, 22, 65] → 12
+
+Swap with second element (25)
+→ [11, 12, 25, 22, 65]
+
+Pass 3:
+
+Find smallest element in [25, 22, 65] → 22
+
+Swap with third element (25)
+→ [11, 12, 22, 25, 65]
+
+Pass 4:
+
+Find smallest element in [25, 65] → 25
+
+Already in correct position → No swap
+→ [11, 12, 22, 25, 65]
+
+✅ Sorted Array: [11, 12, 22, 25, 65]
+
+
+-Time complexity = 0(n2) [worst case and best case]
+
+-Where it can be used
+Small datasets
+
+If the number of elements is small (say ≤ 50–100), selection sort can be okay.
+
+For very small arrays, the simplicity of the algorithm may outweigh the complexity of more advanced sorts.
+
+When memory writes are costly
+
+Unlike bubble sort or insertion sort, selection sort does at most n swaps.
+
+If swapping elements is expensive (e.g., writing to flash memory, EEPROM), selection sort can be better than insertion sort, which can do many shifts.
+
+When you need a simple implementation
+
+Easy to implement from scratch and good for teaching purposes.
+
+Useful in embedded systems or small devices where libraries like Arrays.sort() are not available.
+
+Finding k-th smallest/largest without full sorting
+
+If you just need the smallest/largest k elements, you can stop selection sort after k passes instead of sorting the whole array.
+
+This is more efficient than fully sorting when k is much smaller than n.
+
+When order stability is not required
+
+Selection sort is not stable (relative order of equal elements may change).
+
+But if stability doesn’t matter, it works fine.
+
+Resource-constrained environments
+
+Selection sort works in-place with O(1) extra space.
+
+Good for situations where memory is extremely limited.
